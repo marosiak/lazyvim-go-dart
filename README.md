@@ -18,7 +18,8 @@ Just download release and unpack into place where your **$PATH** is configure.
 open windows terminal (without WSL) and type win32yank.exe - if it was not found, google how to setup **$PATH** on windows
 
 
-## Backup config (skip if you don't care)
+## Backup config
+Skip if you don't care
 
 ```bash
 mv ~/.config/nvim{,.bak}
