@@ -19,6 +19,23 @@ return {
           },
         },
       },
+      cmp = {
+        highlight = "foreground",
+      },
+      document_color = {
+        enabled = true,
+        kind = "inline",
+        inline_symbol = "󰝤 ",
+        debounce = 200,
+      },
+      conceal = {
+        enabled = true,
+        min_length = nil,
+        symbol = "󱏿",
+        highlight = {
+          fg = "#38BDF8",
+        },
+      },
     },
   },
 
