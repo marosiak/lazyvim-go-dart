@@ -9,12 +9,17 @@ There are my favourite plugins and settings, in future I'll also extend it with 
 
 ## Pre requirements
 - First of all install neovim
+- rust with cargo package manager
 
 ### If you're using WSL
 Clipboard wont work unless you'll configure it, the required configs are already in this repo, anyway you'll need to install [Win32Yank]([/guides/content/editing-an-existing-page#modifying-front-matter](https://github.com/equalsraf/win32yank/releases)) Just download release and unpack into place where your **$PATH** is configure.
 
-#### Troubleshoting
-Open windows terminal (without WSL) and type win32yank.exe - if it was not found, google how to setup **$PATH** on windows
+# Troubleshoting
+## General
+Use `:LazyHealth` and resolve alteast problems, in ideal scenario also warnings for the most optimal results
+
+## Windows WSL
+open windows terminal (without WSL) and type win32yank.exe - if it was not found, google how to setup **$PATH** on windows
 
 
 ## Backup config
