@@ -10,6 +10,7 @@ There are my favourite plugins and settings, in future I'll also extend it with 
 ## Pre requirements
 - First of all install `neovim`
 - `git`
+- `curl`
 - `rust` with `cargo` package manager
 - `tree-sitter` (Should be shipped with neovim and available from your `$PATH`)
 
