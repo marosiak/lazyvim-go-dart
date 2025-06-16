@@ -50,22 +50,31 @@ return {
 
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      require("lspconfig").tailwindcss.setup({
-        cmd = { "tailwindcss-language-server", "--stdio" },
-        filetypes = { "go", "html", "templ", "gotmpl, jsx, tsx" },
-        root_dir = require("lspconfig.util").root_pattern("tailwind.config.js", ".git"),
-        settings = {
-          tailwindCSS = {
-            experimental = {
-              classRegex = {
-                [[Class\(["']([^"']+)["']\)]],
+    opts = {
+      servers = {
+        tailwindcss = {
+          filetypes = { "go", "html", "templ", "gotmpl", "jsx", "tsx" },
+          root_dir = require("lspconfig.util").root_pattern("tailwind.config.js", ".git"),
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  [[Class\(["']([^"']+)["']\)]],
+                },
+              },
+              includeLanguages = {
+                go = "html",
               },
             },
           },
+          init_options = {
+            userLanguages = {
+              go = "html",
+            },
+          },
         },
-      })
-    end,
+      },
+    },
   },
 
   {
