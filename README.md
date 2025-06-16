@@ -8,7 +8,7 @@ There are my favourite plugins and settings, in future I'll also extend it with 
 # How to?
 
 ## Pre requirements
-First of all install neovim
+- First of all install neovim
 
 ### If you're using WSL
 Clipboard wont work unless you'll configure it, the required configs are already in this repo, anyway you'll need to install [Win32Yank]<https://github.com/equalsraf/win32yank/releases>
@@ -50,6 +50,15 @@ Open nvim, go into Lazy tab and sync
 
 # Keybindings
 
-I didn't modify any, will try to stick to it.
+### Golang
+Press `<leader>cg` in order to see extra features, for now just a few, but there are more LSP oriented just in `<leader>c`
+-  ![Img](./img/gopher-keybinds.png) 
 
 https://www.lazyvim.org/keymaps
+
+
+
+
+# TODO:
+Describe 
+
