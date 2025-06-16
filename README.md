@@ -8,8 +8,10 @@ There are my favourite plugins and settings, in future I'll also extend it with 
 # How to?
 
 ## Pre requirements
-- First of all install neovim
-- rust with cargo package manager
+- First of all install `neovim`
+- `git`
+- `rust` with `cargo` package manager
+- `tree-sitter` (Should be shipped with neovim and available from your `$PATH`)
 
 ### If you're using WSL
 Clipboard wont work unless you'll configure it, the required configs are already in this repo, anyway you'll need to install [Win32Yank]([/guides/content/editing-an-existing-page#modifying-front-matter](https://github.com/equalsraf/win32yank/releases)) Just download release and unpack into place where your **$PATH** is configure.
