@@ -29,11 +29,9 @@ mv ~/.cache/nvim{,.bak}
 ```
 
 ## Installation
-
 ```bash
-git clone https://github.com/marosiak/lazyvim-go-dart ¬/.config/nvim
+git clone https://github.com/marosiak/lazyvim-go-dart ~/.config/nvim
 ```
-
 
 
 ## Updating
@@ -47,17 +45,19 @@ git clone https://github.com/marosiak/lazyvim-go-dart ¬/.config/nvim
 Open nvim, go into Lazy tab and sync
 
 
-# Keybindings
+# Keymaps
 
-### Golang
+There are a lot of keymaps from lazyvim https://www.lazyvim.org/keymaps
+
+
+# Languages
+## Golang
+### Keymaps
 Press `<leader>cg` in order to see extra features, for now just a few, but there are more LSP oriented just in `<leader>c`
 -  ![Img](./img/gopher-keybinds.png) 
 
-https://www.lazyvim.org/keymaps
 
-
-
-
-# TODO:
-Describe 
-
+### Commands
+Common ones: `:GoBuild` `:GoRun` `:GoStop` `:GoTest` `:GoCoverage`
+You can close appearing terminal with `GoTermClose` or just `<leader>w` (basically use window navigations)
+https://github.com/ray-x/go.nvim?tab=readme-ov-file#build-and-test
