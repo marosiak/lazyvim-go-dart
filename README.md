@@ -11,8 +11,7 @@ There are my favourite plugins and settings, in future I'll also extend it with 
 - First of all install neovim
 
 ### If you're using WSL
-Clipboard wont work unless you'll configure it, the required configs are already in this repo, anyway you'll need to install [Win32Yank]<https://github.com/equalsraf/win32yank/releases>
-Just download release and unpack into place where your **$PATH** is configure.
+Clipboard wont work unless you'll configure it, the required configs are already in this repo, anyway you'll need to install [Win32Yank]([/guides/content/editing-an-existing-page#modifying-front-matter](https://github.com/equalsraf/win32yank/releases)) Just download release and unpack into place where your **$PATH** is configure.
 
 #### Troubleshoting
 open windows terminal (without WSL) and type win32yank.exe - if it was not found, google how to setup **$PATH** on windows
