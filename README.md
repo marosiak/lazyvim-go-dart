@@ -19,7 +19,7 @@ Clipboard wont work unless you'll configure it, the required configs are already
 
 # Troubleshoting
 ## General
-Use `:LazyHealth` and resolve alteast problems, in ideal scenario also warnings for the most optimal results
+Use `:LazyHealth` and resolve at least problems, in ideal scenario also warnings for the most optimal results
 
 ## Windows WSL
 open windows terminal (without WSL) and type win32yank.exe - if it was not found, google how to setup **$PATH** on windows
