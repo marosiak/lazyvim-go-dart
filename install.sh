@@ -9,14 +9,18 @@ RED='\033[0;31m'
 read -p "🔄 Do you need backup of current config? (y/n): " backup_choice
 if [[ "$backup_choice" == "y" ]]; then
   echo -e "${YELLOW}📦 Creating backup...${NC}"
-  mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak.$(date +%s)"
+  if [ -d "$HOME/.config/nvim" ]; then
+    mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak.$(date +%s)"
+    echo -e "${GREEN} ✅ Backup created successfully!${NC}"
+  else
+    echo -e "${BLUE}ℹ️ No existing config found. Skipping backup.${NC}"
+  fi
   echo -e "${GREEN} ✅ Success!"
 fi
 
 if uname -r | grep -q "WSL"; then
   echo -e "$BLUE Seems like you're using WSL"
   echo -e "$GREEN it's oficially supported, in case of troubles visit README.md"
-
 fi
 
 if ! command -v git &>/dev/null; then
