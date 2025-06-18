@@ -9,12 +9,10 @@ return {
     },
     opts = {
       server = {
-        -- override = false,
         settings = {
           tailwindCSS = {
             includeLanguages = { go = "html" },
             experimental = {
-              -- musi być REGEX (nie Lua-pattern) i z ucieczkami "\\"!
               classRegex = { [[\.Class\(["']([^"']+)["']\)]] },
             },
           },
@@ -61,36 +59,36 @@ return {
 
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        tailwindcss = {
-          filetypes = { "go", "html", "templ", "gotmpl", "jsx", "tsx" },
-          root_dir = require("lspconfig.util").root_pattern("tailwind.config.js", ".git"),
-          includeLanguages = { go = "html" },
-          experimental = {
-            classRegex = { [[\.Class\(["']([^"']+)["']\)]] },
-          },
-          settings = {
-            tailwindCSS = {
-              experimental = {
-                classRegex = {
-                  [[Class\(["']([^"']+)["']\)]],
-                },
-              },
-              includeLanguages = {
-                go = "html",
+    opts = function(_, opts)
+      opts.servers = opts.servers or {}
+      opts.servers.tailwindcss = {
+        filetypes = { "go", "html", "templ", "gotmpl", "jsx", "tsx" },
+        root_dir = require("lspconfig.util").root_pattern("tailwind.config.js", ".git"),
+        includeLanguages = { go = "html" },
+        experimental = {
+          classRegex = { [[\.Class\(["']([^"']+)["']\)]] },
+        },
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                [[Class\(["']([^"']+)["']\)]],
               },
             },
-          },
-          init_options = {
-            userLanguages = {
+            includeLanguages = {
               go = "html",
             },
           },
         },
-      },
-    },
+        init_options = {
+          userLanguages = {
+            go = "html",
+          },
+        },
+      }
+    end,
   },
+
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     config = function()
