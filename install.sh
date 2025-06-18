@@ -28,7 +28,7 @@ if ! command -v git &>/dev/null; then
   exit 1
 fi
 
-git clone https://github.com/marosiak/lazyvim-go-dart ~/.config/nvim
+git clone git@github.com:marosiak/lazyvim-go-dart.git ~/.config/nvim
 echo -e "${GREEN}🏁 Configuration successfully installed!${NC}"
 
 if ! command -v nvim &>/dev/null; then

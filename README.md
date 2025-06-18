@@ -1,8 +1,21 @@
 # 💤 LazyVim (Golang + Flutter + Dart + WSL)
 
+## Why?
+
+There are my favourite plugins and settings, in future I'll also extend it with snippets
+I am working on multiple devices so it's great to sync configs between.
+
+Also, I love the idea of actually OWNING software
+Instead of paying each month (I am Jetbrains user since ~10 years)
+
+## Quickstart
+
+`bash <(curl -sL "https://raw.githubusercontent.com/marosiak/lazyvim-go-dart/refs/heads/master/install.sh")`
+
 <!--toc:start-->
 - [💤 LazyVim (Golang + Flutter + Dart + WSL)](#💤-lazyvim-golang-flutter-dart-wsl)
   - [Why?](#why)
+  - [Quickstart](#quickstart)
   - [How to?](#how-to)
     - [Pre-requirements](#pre-requirements)
     - [If you're using WSL](#if-youre-using-wsl)
@@ -26,14 +39,6 @@
       - [Flutter commands](#flutter-commands)
   - [Find more keymaps & commands](#find-more-keymaps-commands)
 <!--toc:end-->
-
-## Why?
-
-There are my favourite plugins and settings, in future I'll also extend it with snippets
-I am working on multiple devices so it's great to sync configs between.
-
-Also, I love the idea of actually OWNING software
-Instead of paying each month (I am Jetbrains user since ~10 years)
 
 ## How to?
 
