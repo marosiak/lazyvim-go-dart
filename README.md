@@ -110,7 +110,7 @@ mv ~/.cache/nvim{,.bak}
 ### Install
 
 ```bash
-git clone https://github.com/marosiak/lazyvim-go-dart ~/.config/nvim
+git clone git@github.com:marosiak/lazyvim-go-dart.git ~/.config/nvim
 ```
 
 ## Updating
