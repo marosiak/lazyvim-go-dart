@@ -9,13 +9,22 @@ return {
     },
     opts = {
       server = {
-        override = false,
+        -- override = false,
+        settings = {
+          tailwindCSS = {
+            includeLanguages = { go = "html" },
+            experimental = {
+              -- musi być REGEX (nie Lua-pattern) i z ucieczkami "\\"!
+              classRegex = { [[\.Class\(["']([^"']+)["']\)]] },
+            },
+          },
+        },
       },
       extension = {
         patterns = {
           go = {
-            '%.Class%(%"(.-)%"%)',
-            "%.Class%(%'(.-)%'%)",
+            '%.Class%(%s*"([^"]+)"[^)]*%)',
+            "%.Class%(%s*'([^']+)'[^)]*%)",
           },
         },
       },
@@ -45,6 +54,8 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
       table.insert(opts.sources, { name = "tailwind-tools" })
+      table.insert(opts.sources, { name = "tailwindCSS" })
+      table.insert(opts.sources, { name = "nvim_lsp" })
     end,
   },
 
@@ -55,6 +66,10 @@ return {
         tailwindcss = {
           filetypes = { "go", "html", "templ", "gotmpl", "jsx", "tsx" },
           root_dir = require("lspconfig.util").root_pattern("tailwind.config.js", ".git"),
+          includeLanguages = { go = "html" },
+          experimental = {
+            classRegex = { [[\.Class\(["']([^"']+)["']\)]] },
+          },
           settings = {
             tailwindCSS = {
               experimental = {
@@ -76,7 +91,6 @@ return {
       },
     },
   },
-
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     config = function()
